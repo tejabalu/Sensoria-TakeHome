@@ -62,7 +62,7 @@ export default function SmallWithSocial() {
 					© 2022 Teja Balu. View the source code{" "}
 					<Link
 						href="https://github.com/tejabalu/Sensoria-TakeHome"
-						textColor={"cyan"}
+						textColor={"blue.500"}
 					>
 						here.
 					</Link>{" "}
