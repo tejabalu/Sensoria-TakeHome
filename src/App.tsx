@@ -63,19 +63,21 @@ export const App = () => {
 					setHistory={setHistoryPage}
 					setHelp={setHelpPage}
 				/>
-				<Container maxW={"4xl"}>
+				<Container maxW={"d"}>
 					<Grid p={3}>
-						{home && (
-							<>
-								<BoredSelectors
-									onUrlChange={onUrlChange}
-									toggleReload={toggleReload}
-								/>
-								<BoredBox url={url} toggleReload={reload} />
-							</>
-						)}
-						{history && <History toggleReload={reload} />}
-						{help && <Help />}
+						<VStack spacing={8}>
+							{home && (
+								<>
+									<BoredSelectors
+										onUrlChange={onUrlChange}
+										toggleReload={toggleReload}
+									/>
+									<BoredBox url={url} toggleReload={reload} />
+								</>
+							)}
+							{history && <History toggleReload={reload} />}
+							{help && <Help />}
+						</VStack>
 					</Grid>
 				</Container>
 				<Footer />
