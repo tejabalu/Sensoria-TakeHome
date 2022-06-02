@@ -1,9 +1,19 @@
 # Get Activities
 
-## This is an app that suggests new activities to do when one is bored.
+This is an app that suggests new activities to do when one is bored.
 
-This project was bootstrapped with
-[Create Rsortedkeylisthttps://github.com/facebook/create-react-app).
+The project uses the [bored api](https://boredapi.com/api/) to get suggestions.
+
+## Application Features
+
+The following are the list of features currently implemented:
+
+-   The user can click a button to get a new activity.
+-   The user can filter the activities by category, and number of participants required for the activity.
+-   The user can see the previous activities that were suggested in the history tab. This data persists, and remains in the application even if the website/browser is closed, or even if the user restarts the application. When the user clears the cache and localstorage of the browser, the history tab will be cleared.
+-   The user can select and remove selected activities from the history tab.
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
