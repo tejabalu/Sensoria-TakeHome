@@ -51,7 +51,7 @@ export default function SmallWithSocial() {
 		>
 			<Container
 				as={Stack}
-				maxW={"6xl"}
+				maxW={"4xl"}
 				py={4}
 				direction={{ base: "column", md: "row" }}
 				spacing={4}
@@ -59,12 +59,12 @@ export default function SmallWithSocial() {
 				align={{ base: "center", md: "center" }}
 			>
 				<Text>
-					© 2022 Teja Balu. View the source code{" "}
+					© 2022 Teja Balu. {` `}
 					<Link
 						href="https://github.com/tejabalu/Sensoria-TakeHome"
 						textColor={"blue.500"}
 					>
-						here.
+						Source Code
 					</Link>{" "}
 				</Text>
 				<Stack direction={"row"} spacing={6}>

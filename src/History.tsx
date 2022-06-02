@@ -42,7 +42,7 @@ function History({ toggleReload }: { toggleReload: boolean }) {
 
 	return (
 		<VStack>
-			<Text fontSize="4xl" fontWeight="bold">
+			<Text mt={12} fontSize="4xl" fontWeight="bold">
 				History
 			</Text>
 			{keylist.map((key) => {

@@ -1,10 +1,18 @@
 import * as React from "react";
-import { ChakraProvider, Box, VStack, Grid, theme } from "@chakra-ui/react";
+import {
+	ChakraProvider,
+	Box,
+	VStack,
+	Grid,
+	theme,
+	Container,
+} from "@chakra-ui/react";
 import BoredBox from "./Bored";
 import BoredSelectors from "./BoredSelectors";
 import Footer from "./Footer";
 import Nav from "./NavBar";
 import History from "./History";
+import { Help } from "./Help";
 
 export const App = () => {
 	const [url, setUrl] = React.useState(
@@ -21,21 +29,43 @@ export const App = () => {
 	};
 
 	const [home, setHome] = React.useState(true);
+	const [history, setHistory] = React.useState(false);
+	const [help, setHelp] = React.useState(false);
+
 	const setHomePage = () => {
 		setHome(true);
+		setHistory(false);
+		setHelp(false);
 	};
 	const setHistoryPage = () => {
 		setHome(false);
+		setHistory(true);
+		setHelp(false);
+	};
+	const setHelpPage = () => {
+		setHome(false);
+		setHistory(false);
+		setHelp(true);
 	};
 
 	return (
 		<ChakraProvider theme={theme}>
-			<Box fontSize="xl">
-				<Nav setHome={setHomePage} setHistory={setHistoryPage} />
-				<Grid mt={16} minH={"80vh"} p={3}>
-					<VStack spacing={8}>
-						{/* show home if home is true, show history if history is true */}
-						{home ? (
+			<Box
+				// vertical flex
+				display={"flex"}
+				flexDirection={"column"}
+				justifyContent={"space-between"}
+				fontSize="xl"
+				minH={["100vh", "100vh", "100vh", "100vh"]}
+			>
+				<Nav
+					setHome={setHomePage}
+					setHistory={setHistoryPage}
+					setHelp={setHelpPage}
+				/>
+				<Container maxW={"4xl"}>
+					<Grid p={3}>
+						{home && (
 							<>
 								<BoredSelectors
 									onUrlChange={onUrlChange}
@@ -43,11 +73,11 @@ export const App = () => {
 								/>
 								<BoredBox url={url} toggleReload={reload} />
 							</>
-						) : (
-							<History toggleReload={reload} />
 						)}
-					</VStack>
-				</Grid>
+						{history && <History toggleReload={reload} />}
+						{help && <Help />}
+					</Grid>
+				</Container>
 				<Footer />
 			</Box>
 		</ChakraProvider>

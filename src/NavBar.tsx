@@ -5,58 +5,70 @@ import {
 	useColorModeValue,
 	Stack,
 	useColorMode,
+	Container,
 } from "@chakra-ui/react";
 import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 export default function Nav({
 	setHome,
 	setHistory,
+	setHelp,
 }: {
 	setHome: () => void;
 	setHistory: () => void;
+	setHelp: () => void;
 }) {
 	const { colorMode, toggleColorMode } = useColorMode();
 	return (
 		<>
 			<Box bg={useColorModeValue("gray.100", "gray.900")} px={4}>
-				<Flex
-					h={16}
-					alignItems={"center"}
-					justifyContent={"space-between"}
-				>
+				<Container maxW={"4xl"}>
 					<Flex
-						padding={2}
-						w={200}
-						justifyContent={"space-between"}
+						h={16}
 						alignItems={"center"}
+						justifyContent={"space-between"}
 					>
-						<Button
-							onClick={() => {
-								setHome();
-							}}
+						<Flex
+							padding={2}
+							w={270}
+							justifyContent={"space-between"}
+							alignItems={"center"}
 						>
-							Home
-						</Button>
-						<Button
-							onClick={() => {
-								setHistory();
-							}}
-						>
-							History
-						</Button>
-					</Flex>
-					<Flex alignItems={"center"}>
-						<Stack direction={"row"} spacing={7}>
-							<Button onClick={toggleColorMode}>
-								{colorMode === "light" ? (
-									<MoonIcon />
-								) : (
-									<SunIcon />
-								)}
+							<Button
+								onClick={() => {
+									setHome();
+								}}
+							>
+								Home
 							</Button>
-						</Stack>
+							<Button
+								onClick={() => {
+									setHistory();
+								}}
+							>
+								History
+							</Button>
+							<Button
+								onClick={() => {
+									setHelp();
+								}}
+							>
+								Help
+							</Button>
+						</Flex>
+						<Flex alignItems={"center"}>
+							<Stack direction={"row"} spacing={7}>
+								<Button onClick={toggleColorMode}>
+									{colorMode === "light" ? (
+										<MoonIcon />
+									) : (
+										<SunIcon />
+									)}
+								</Button>
+							</Stack>
+						</Flex>
 					</Flex>
-				</Flex>
+				</Container>
 			</Box>
 		</>
 	);
