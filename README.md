@@ -20,6 +20,7 @@ The following are the features that are yet to be implemented:
 -   Customized 404 page for the application.
 -   Notification to the user incase the API fails to respond.
 -   The current history view does not show the activities in the order they were suggested. In the future, the view should be sorted so that the user sees the latest suggestions first in the history tab.
+-   Mobile/tablet responsive design yet to be verified.
 
 > The live version of this app is available on [Vercel](https://getactivities-tejabalu.vercel.app/)
 
@@ -28,9 +29,7 @@ The following are the features that are yet to be implemented:
 The following are the stacks used for creating this app:
 
 -   [React](https://reactjs.org/)
-    -   React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.
--   [React Hooks](https://reactjs.org/docs/hooks-intro.html)
-    -   React hooks allows one to use state and other React features without writing a class.
+    -   React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and mpanies. React can be used as a base in the development of single-page or mobile applications.
 -   [TypeScript](https://www.typescriptlang.org/)
     -   Typescript is an open-source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript, and adds optional static typing to the language.
 -   [Chakra UI](https://chakra-ui.com/) - Chakra UI is a library of components for React. It is designed to be a drop-in replacement for the React ecosystem's existing components.
