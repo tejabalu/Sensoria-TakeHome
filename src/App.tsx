@@ -1,15 +1,5 @@
 import * as React from "react";
-import {
-	ChakraProvider,
-	Box,
-	Link,
-	VStack,
-	Grid,
-	theme,
-	Text,
-	Button,
-} from "@chakra-ui/react";
-import { ColorModeSwitcher } from "./ColorModeSwitcher";
+import { ChakraProvider, Box, VStack, Grid, theme } from "@chakra-ui/react";
 import BoredBox from "./Bored";
 import BoredSelectors from "./BoredSelectors";
 import Footer from "./Footer";
@@ -31,14 +21,11 @@ export const App = () => {
 	};
 
 	const [home, setHome] = React.useState(true);
-	const [history, setHistory] = React.useState(false);
 	const setHomePage = () => {
 		setHome(true);
-		setHistory(false);
 	};
 	const setHistoryPage = () => {
 		setHome(false);
-		setHistory(true);
 	};
 
 	return (

@@ -26,7 +26,7 @@ function History({ toggleReload }: { toggleReload: boolean }) {
 
 	React.useEffect(() => {
 		setHistoryReload(!historyReload);
-	}, [toggleReload, keylist]);
+	}, [toggleReload, historyReload]);
 
 	// update keylist when new activity is added
 	React.useEffect(() => {
@@ -42,14 +42,9 @@ function History({ toggleReload }: { toggleReload: boolean }) {
 
 	return (
 		<VStack>
-			<Text
-				// heading
-				fontSize="4xl"
-				fontWeight="bold"
-			>
+			<Text fontSize="4xl" fontWeight="bold">
 				History
 			</Text>
-			{/* pass each list item to HistoryBox */}
 			{keylist.map((key) => {
 				console.log(key);
 				return (

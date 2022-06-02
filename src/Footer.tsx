@@ -2,12 +2,13 @@ import {
 	Box,
 	chakra,
 	Container,
+	Link,
 	Stack,
 	Text,
 	useColorModeValue,
 	VisuallyHidden,
 } from "@chakra-ui/react";
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { ReactNode } from "react";
 
 const SocialButton = ({
@@ -57,16 +58,27 @@ export default function SmallWithSocial() {
 				justify={{ base: "center", md: "space-between" }}
 				align={{ base: "center", md: "center" }}
 			>
-				<Text>© 2022 Chakra Templates. All rights reserved</Text>
+				<Text>
+					© 2022 Teja Balu. View the source code{" "}
+					<Link
+						href="https://github.com/tejabalu/Sensoria-TakeHome"
+						textColor={"cyan"}
+					>
+						here.
+					</Link>{" "}
+				</Text>
 				<Stack direction={"row"} spacing={6}>
-					<SocialButton label={"Twitter"} href={"#"}>
-						<FaTwitter />
+					<SocialButton
+						label={"LinkedIn"}
+						href={"https://www.linkedin.com/in/tejabalu/"}
+					>
+						<FaLinkedin />
 					</SocialButton>
-					<SocialButton label={"YouTube"} href={"#"}>
-						<FaYoutube />
-					</SocialButton>
-					<SocialButton label={"Instagram"} href={"#"}>
-						<FaInstagram />
+					<SocialButton
+						label={"GitHub"}
+						href={"https://github.com/tejabalu"}
+					>
+						<FaGithub />
 					</SocialButton>
 				</Stack>
 			</Container>

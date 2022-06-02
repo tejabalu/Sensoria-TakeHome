@@ -2,14 +2,11 @@ import * as React from "react";
 import {
 	Box,
 	VStack,
-	Grid,
-	theme,
 	Text,
 	SliderTrack,
 	SliderFilledTrack,
 	SliderThumb,
 	Slider,
-	SliderMark,
 	HStack,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
@@ -34,7 +31,6 @@ function BoredBox(props: UrlProps) {
 		const response = await fetch(url);
 
 		const data = await response.json();
-		// append time to data
 		data.time = new Date().getTime().toLocaleString();
 		setData(data);
 		localStorage.setItem("activities" + data.key, JSON.stringify(data));
