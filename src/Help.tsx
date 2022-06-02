@@ -39,6 +39,7 @@ export const Help = () => {
 						Filter based on the number of participants required.
 					</ListItem>
 					<ListItem>View your history of activities.</ListItem>
+					<ListItem>Switch to light and dark modes.</ListItem>
 				</UnorderedList>
 				<Text>Thanks for visiting!</Text>
 			</VStack>

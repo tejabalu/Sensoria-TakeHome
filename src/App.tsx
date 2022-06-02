@@ -6,6 +6,7 @@ import {
 	Grid,
 	theme,
 	Container,
+	extendTheme,
 } from "@chakra-ui/react";
 import BoredBox from "./Bored";
 import BoredSelectors from "./BoredSelectors";
@@ -13,6 +14,13 @@ import Footer from "./Footer";
 import Nav from "./NavBar";
 import History from "./History";
 import { Help } from "./Help";
+
+const config = {
+	useSystemColorMode: false,
+	initialColorMode: "dark",
+};
+
+const customTheme = extendTheme({ config });
 
 export const App = () => {
 	const [url, setUrl] = React.useState(
@@ -49,7 +57,7 @@ export const App = () => {
 	};
 
 	return (
-		<ChakraProvider theme={theme}>
+		<ChakraProvider theme={customTheme}>
 			<Box
 				// vertical flex
 				display={"flex"}
