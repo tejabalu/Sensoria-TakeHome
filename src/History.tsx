@@ -20,7 +20,6 @@ const sortedkeylist = initialkeylist.sort((a, b) => {
 });
 
 function History({ toggleReload }: { toggleReload: boolean }) {
-	console.log(toggleReload, "reload");
 	const [historyReload, setHistoryReload] = React.useState(false);
 	const [keylist, setKeyList] = React.useState(sortedkeylist);
 
@@ -46,7 +45,6 @@ function History({ toggleReload }: { toggleReload: boolean }) {
 				History
 			</Text>
 			{keylist.map((key) => {
-				console.log(key);
 				return (
 					<HistoryBox
 						localkey={key}

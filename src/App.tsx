@@ -28,7 +28,6 @@ export const App = () => {
 	);
 	const onUrlChange = (url: string) => {
 		setUrl(url);
-		console.log(url);
 	};
 	const [reload, setReloadSwitch] = React.useState(false);
 
