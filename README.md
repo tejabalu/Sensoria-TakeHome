@@ -35,6 +35,10 @@ The following are the stacks used for creating this app:
     -   Typescript is an open-source programming language developed and maintained by Microsoft. It is a strict syntactical superset of JavaScript, and adds optional static typing to the language.
 -   [Chakra UI](https://chakra-ui.com/) - Chakra UI is a library of components for React. It is designed to be a drop-in replacement for the React ecosystem's existing components.
     This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+-   [Bored API](https://boredapi.com/)
+    -   Bored API is a free API that provides a random activity suggestions.
+
+---
 
 ## Installation steps to run the application locally.
 
@@ -67,4 +71,6 @@ See the section about
 [deployment](https://facebook.github.io/create-react-app/docs/deployment) for
 more information.
 
-Thanks for visiting!
+---
+
+### Thanks for visiting!
