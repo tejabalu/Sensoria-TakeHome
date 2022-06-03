@@ -23,14 +23,19 @@ function BoredSelectors(props: BoredSelectorsProps) {
 
 	const setUrlActivity = useCallback(
 		(e: { target: { value: any } }) => {
-			props.onUrlChange("activity/?type=" + e.target.value);
+			props.onUrlChange(
+				"https://www.boredapi.com/api/activity/?type=" + e.target.value
+			);
 		},
 		[props.onUrlChange]
 	);
 
 	const setUrlParticipants = useCallback(
 		(e: { target: { value: string } }) => {
-			props.onUrlChange("activity/?participants=" + e.target.value);
+			props.onUrlChange(
+				"https://www.boredapi.com/api/activity/?participants=" +
+					e.target.value
+			);
 		},
 		[props.onUrlChange]
 	);

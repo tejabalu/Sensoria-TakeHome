@@ -23,7 +23,9 @@ const config = {
 const customTheme = extendTheme({ config });
 
 export const App = () => {
-	const [url, setUrl] = React.useState("activity/");
+	const [url, setUrl] = React.useState(
+		"https://www.boredapi.com/api/activity/"
+	);
 	const onUrlChange = (url: string) => {
 		setUrl(url);
 	};
