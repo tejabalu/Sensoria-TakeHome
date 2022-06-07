@@ -10,6 +10,7 @@ import {
 	HStack,
 } from "@chakra-ui/react";
 import { useEffect } from "react";
+import axios from "axios";
 
 export declare interface UrlProps {
 	url: string;
@@ -28,11 +29,10 @@ function BoredBox(props: UrlProps) {
 	});
 
 	const getNewActivity = async (url: string) => {
-		const response = await fetch(url);
+		axios.get(url).then((response) => {
+			setData(response.data);
+		});
 
-		const data = await response.json();
-		data.time = new Date().getTime().toLocaleString();
-		setData(data);
 		localStorage.setItem("activities" + data.key, JSON.stringify(data));
 	};
 

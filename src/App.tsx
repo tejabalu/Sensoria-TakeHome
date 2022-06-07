@@ -23,9 +23,7 @@ const config = {
 const customTheme = extendTheme({ config });
 
 export const App = () => {
-	const [url, setUrl] = React.useState(
-		"https://www.boredapi.com/api/activity/"
-	);
+	const [url, setUrl] = React.useState("/activity/");
 	const onUrlChange = (url: string) => {
 		setUrl(url);
 	};
@@ -58,12 +56,11 @@ export const App = () => {
 	return (
 		<ChakraProvider theme={customTheme}>
 			<Box
-				// vertical flex
 				display={"flex"}
 				flexDirection={"column"}
 				justifyContent={"space-between"}
 				fontSize="xl"
-				minH={["100vh", "100vh", "100vh", "100vh"]}
+				minH={"100vh"}
 			>
 				<Nav
 					setHome={setHomePage}
